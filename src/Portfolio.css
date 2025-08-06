@@ -1,0 +1,565 @@
+/* Portfolio Custom Styles */
+
+/* Hero Section Animations and Effects */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #f3e8ff 100%);
+}
+
+.hero-animations {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(40px);
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-circle-1 {
+  top: 5rem;
+  left: 2.5rem;
+  width: 18rem;
+  height: 18rem;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  animation-delay: 0s;
+}
+
+.floating-circle-2 {
+  bottom: 5rem;
+  right: 2.5rem;
+  width: 18rem;
+  height: 18rem;
+  background: linear-gradient(135deg, #f3e8ff, #e0e7ff);
+  animation-delay: 2s;
+}
+
+.floating-circle-3 {
+  top: 50%;
+  left: 50%;
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(135deg, #fef3c7, #fed7aa);
+  animation-delay: 4s;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+/* Profile Image Section - Updated for locked image */
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  padding: 8px;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.profile-frame:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.profile-glow {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse-glow 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* Achievement Cards */
+.achievement-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.achievement-card:hover::before {
+  left: 100%;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* New Skills Category Cards - Replaced loading bars */
+.skill-category-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border: 2px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #374151;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  border-color: #3b82f6;
+  color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.skill-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.3s ease;
+}
+
+.skill-tag:hover::before {
+  left: 100%;
+}
+
+.additional-skill-tag {
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.additional-skill-tag:hover {
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  border-color: #3b82f6;
+  color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Project Cards - Updated with image support */
+.project-card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.project-card:hover .project-header::before {
+  opacity: 1;
+}
+
+.award-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+  z-index: 2;
+}
+
+.project-links {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.project-link-btn {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-link-btn:hover {
+  background: white;
+  transform: scale(1.1);
+  color: #3b82f6;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Achievement Highlights */
+.achievement-highlight {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #f1f5f9;
+  display: flex;
+  align-items: start;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.achievement-highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+  background: linear-gradient(135deg, #fef3c7, #fed7aa);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.award-amount {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.achievement-card-alt {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #f1f5f9;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.achievement-card-alt:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Cards */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.1);
+}
+
+.contact-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+  transform: scale(1.1);
+}
+
+/* Social Links */
+.social-link {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.social-github {
+  background: linear-gradient(135deg, #1f2937, #374151);
+}
+
+.social-github:hover {
+  background: linear-gradient(135deg, #374151, #4b5563);
+  box-shadow: 0 15px 30px rgba(31, 41, 55, 0.3);
+}
+
+.social-linkedin {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.social-linkedin:hover {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}
+
+.social-leetcode {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.social-leetcode:hover {
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+  box-shadow: 0 15px 30px rgba(249, 115, 22, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skill-category-card {
+    padding: 1.5rem;
+  }
+  
+  .project-header {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-frame {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .floating-circle-1,
+  .floating-circle-2 {
+    width: 12rem;
+    height: 12rem;
+  }
+  
+  .floating-circle-3 {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .achievement-highlight {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .skill-category-card {
+    padding: 1.25rem;
+  }
+  
+  .skill-tag {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .project-header {
+    height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-frame {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .floating-circle {
+    display: none;
+  }
+  
+  .skill-category-card {
+    padding: 1rem;
+  }
+  
+  .project-header {
+    height: 160px;
+  }
+  
+  .award-badge {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .project-link-btn {
+    padding: 0.5rem;
+  }
+}
+
+/* Smooth scrolling and animations */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
