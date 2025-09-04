@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Menu, X, Award, Code, Users, Briefcase, GraduationCap, Trophy, Target, Star, User, Camera, Edit3 } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Menu, X, Award, Code, Users, GraduationCap, Trophy, Target, Star } from 'lucide-react';
 import './Portfolio.css';
 
 const Portfolio = () => {
