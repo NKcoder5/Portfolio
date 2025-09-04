@@ -38,10 +38,10 @@ const Portfolio = () => {
         },
         {
             title: 'AI Virtual Study Assistant',
-            description: 'Intelligent study companion offering career guidance, personalized learning paths, curated study materials, quizzes, and user profiles with AI-driven recommendations.',
+            description: 'An AI-powered study companion providing career guidance, college and course recommendations, personalized learning paths, curated materials, quizzes, and progress tracking with AI-driven insights.',
             technologies: ['AI/ML', 'React', 'Node.js', 'MongoDB'],
-            github: 'https://github.com/NKcoder5/E-Buddy',
-            live: '#',
+            github: 'https://github.com/NKcoder5/E-Buddy_deployed',
+            live: 'https://e-buddy-deployed-1.onrender.com',
             award: '2nd Prize - ₹3000',
             event: "HackBuzz'25 (CodeBuilders)",
             image: '/e-buddy.png'
@@ -90,7 +90,6 @@ const Portfolio = () => {
         'NPTEL: Demystifying Networks',
         'Oracle University: Oracle Java SE17 Developer',
         'Oracle University: Oracle Apex Cloud Developer',
-        'MongoDB, Inc.: MongoDB Associate Developer'
     ];
 
     const achievements = [
