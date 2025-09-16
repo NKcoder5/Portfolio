@@ -193,7 +193,7 @@ const Portfolio = () => {
                                 <div className="profile-frame">
                                     <img 
                                         src="/myProfilePic.jpeg" 
-                                        alt="Nandha Kumar S" 
+                                        alt="Nandha kumar S" 
                                         className="profile-image"
                                     />
                                 </div>
@@ -213,7 +213,7 @@ const Portfolio = () => {
                             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                                 Hi, I'm{' '}
                                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                                    Nandha Kumar S
+                                    Nandha kumar S
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-600 mb-4 font-medium">
