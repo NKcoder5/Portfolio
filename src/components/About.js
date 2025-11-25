@@ -1,6 +1,7 @@
 import React from 'react';
-import { Target, Star, Code, Trophy, GraduationCap, Zap } from 'lucide-react';
+import { Target, Star, Code, Trophy, GraduationCap, Zap, Lightbulb, Rocket, Heart, Brain } from 'lucide-react';
 import Section from './ui/Section';
+import FloatingIcon from './ui/FloatingIcon';
 
 const About = () => {
     const highlights = [
@@ -12,6 +13,12 @@ const About = () => {
 
     return (
         <Section id="about" className="bg-white">
+            {/* Floating Icons */}
+            <FloatingIcon icon={Lightbulb} position="top-left" delay={0} color="text-yellow-300" size={50} />
+            <FloatingIcon icon={Rocket} position="top-right" delay={0.2} color="text-blue-300" size={45} />
+            <FloatingIcon icon={Heart} position="bottom-left" delay={0.4} color="text-pink-300" size={40} />
+            <FloatingIcon icon={Brain} position="bottom-right" delay={0.6} color="text-purple-300" size={48} />
+
             <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div className="space-y-8">
                     <div>
@@ -80,3 +87,4 @@ const About = () => {
 };
 
 export default About;
+

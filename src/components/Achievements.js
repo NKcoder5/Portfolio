@@ -1,10 +1,17 @@
 import React from 'react';
-import { Trophy, Award, Star, Code } from 'lucide-react';
+import { Trophy, Award, Star, Code, Medal, Crown, Gem, Zap } from 'lucide-react';
 import Section from './ui/Section';
+import FloatingIcon from './ui/FloatingIcon';
 
 const Achievements = () => {
     return (
         <Section id="achievements" className="bg-white">
+            {/* Floating Icons */}
+            <FloatingIcon icon={Medal} position="top-left" delay={0} color="text-yellow-300" size={52} />
+            <FloatingIcon icon={Crown} position="top-right" delay={0.2} color="text-purple-300" size={48} />
+            <FloatingIcon icon={Gem} position="bottom-left" delay={0.4} color="text-blue-300" size={45} />
+            <FloatingIcon icon={Zap} position="bottom-right" delay={0.6} color="text-orange-300" size={50} />
+
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Achievements</h2>
                 <div className="w-20 h-1.5 bg-gradient-primary rounded-full mx-auto"></div>
@@ -65,3 +72,4 @@ const Achievements = () => {
 };
 
 export default Achievements;
+

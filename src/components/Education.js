@@ -1,6 +1,7 @@
 import React from 'react';
-import { GraduationCap, Calendar } from 'lucide-react';
+import { GraduationCap, Calendar, Book, Award, Pencil, BookOpen } from 'lucide-react';
 import Section from './ui/Section';
+import FloatingIcon from './ui/FloatingIcon';
 import { motion } from 'framer-motion';
 
 const Education = () => {
@@ -25,6 +26,12 @@ const Education = () => {
 
     return (
         <Section id="education" className="bg-gray-50">
+            {/* Floating Icons */}
+            <FloatingIcon icon={Book} position="top-left" delay={0} color="text-blue-300" size={48} />
+            <FloatingIcon icon={Award} position="top-right" delay={0.2} color="text-yellow-300" size={45} />
+            <FloatingIcon icon={Pencil} position="bottom-left" delay={0.4} color="text-green-300" size={42} />
+            <FloatingIcon icon={BookOpen} position="bottom-right" delay={0.6} color="text-purple-300" size={50} />
+
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Education</h2>
                 <div className="w-20 h-1.5 bg-gradient-primary rounded-full mx-auto"></div>
@@ -77,3 +84,4 @@ const Education = () => {
 };
 
 export default Education;
+

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Section = ({ id, className, children }) => {
     return (
-        <section id={id} className={`py-20 md:py-32 relative overflow-hidden ${className}`}>
+        <section id={id} className={`py-12 md:py-16 relative overflow-hidden ${className}`}>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
