@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Download, ArrowRight, Sparkles } from 'lucide-react';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { motion } from 'framer-motion';
 import AnimatedGradient from './ui/AnimatedGradient';
 
 const Hero = () => {

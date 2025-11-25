@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const NAV_ITEMS = ['home', 'about', 'education', 'skills', 'projects', 'achievements', 'contact'];
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
-    const navItems = ['home', 'about', 'education', 'skills', 'projects', 'achievements', 'contact'];
+    const navItems = NAV_ITEMS;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,7 +31,7 @@ const Navbar = () => {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [navItems]);
 
     const scrollToSection = (sectionId) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
